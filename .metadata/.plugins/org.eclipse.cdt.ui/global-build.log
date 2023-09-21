@@ -52,3 +52,226 @@ arm-none-eabi-size   Prvni_projekt.elf
     524	      8	   1568	   2100	    834	Prvni_projekt.elf
 Finished building: default.size.stdout
  
+15:27:47 **** Incremental Build of configuration Debug for project Prvni_projekt ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:69:9: error: unknown type name 'uint8_32t'; did you mean 'uint8_t'?
+   69 |         uint8_32t pole[] = {1,0,0,0,0,1,1,1,0,1}
+      |         ^~~~~~~~~
+      |         uint8_t
+../Core/Src/main.c:70:9: error: expected ',' or ';' before 'while'
+   70 |         while (1) {
+      |         ^~~~~
+../Core/Src/main.c:274:1: error: expected declaration or statement at end of input
+  274 | }
+      | ^
+../Core/Src/main.c:69:19: warning: unused variable 'pole' [-Wunused-variable]
+   69 |         uint8_32t pole[] = {1,0,0,0,0,1,1,1,0,1}
+      |                   ^~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:50:13: warning: 'MX_GPIO_Init' declared 'static' but never defined [-Wunused-function]
+   50 | static void MX_GPIO_Init(void);
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:51:13: warning: 'MX_USART2_UART_Init' declared 'static' but never defined [-Wunused-function]
+   51 | static void MX_USART2_UART_Init(void);
+      |             ^~~~~~~~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:31: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+15:30:19 **** Incremental Build of configuration Debug for project Prvni_projekt ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:69:9: error: unknown type name 'uint8_10t'; did you mean 'uint8_t'?
+   69 |         uint8_10t pole[] = {1,0,0,0,0,1,1,1,0,1}
+      |         ^~~~~~~~~
+      |         uint8_t
+../Core/Src/main.c:70:9: error: expected ',' or ';' before 'while'
+   70 |         while (1) {
+      |         ^~~~~
+../Core/Src/main.c:274:1: error: expected declaration or statement at end of input
+  274 | }
+      | ^
+../Core/Src/main.c:69:19: warning: unused variable 'pole' [-Wunused-variable]
+   69 |         uint8_10t pole[] = {1,0,0,0,0,1,1,1,0,1}
+      |                   ^~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:50:13: warning: 'MX_GPIO_Init' declared 'static' but never defined [-Wunused-function]
+   50 | static void MX_GPIO_Init(void);
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:51:13: warning: 'MX_USART2_UART_Init' declared 'static' but never defined [-Wunused-function]
+   51 | static void MX_USART2_UART_Init(void);
+      |             ^~~~~~~~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:31: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+15:31:58 **** Incremental Build of configuration Debug for project Prvni_projekt ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:70:9: error: expected ',' or ';' before 'while'
+   70 |         while (1) {
+      |         ^~~~~
+../Core/Src/main.c:274:1: error: expected declaration or statement at end of input
+  274 | }
+      | ^
+../Core/Src/main.c:69:17: warning: unused variable 'pole' [-Wunused-variable]
+   69 |         uint8_t pole[] = {1,0,0,0,0,1,1,1,0,1,1,0,0,0,0,1,1,1,0,1,1,0,0,0,0,1,1,1,0,1,1,0}
+      |                 ^~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:50:13: warning: 'MX_GPIO_Init' declared 'static' but never defined [-Wunused-function]
+   50 | static void MX_GPIO_Init(void);
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:51:13: warning: 'MX_USART2_UART_Init' declared 'static' but never defined [-Wunused-function]
+   51 | static void MX_USART2_UART_Init(void);
+      |             ^~~~~~~~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:31: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+15:32:28 **** Incremental Build of configuration Debug for project Prvni_projekt ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:70:9: error: expected ',' or ';' before 'while'
+   70 |         while (1) {
+      |         ^~~~~
+../Core/Src/main.c:274:1: error: expected declaration or statement at end of input
+  274 | }
+      | ^
+../Core/Src/main.c:69:18: warning: unused variable 'pole' [-Wunused-variable]
+   69 |         uint32_t pole[] = {1,0,0,0,0,1,1,1,0,1,1,0,0,0,0,1,1,1,0,1,1,0,0,0,0,1,1,1,0,1,1,0}
+      |                  ^~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:50:13: warning: 'MX_GPIO_Init' declared 'static' but never defined [-Wunused-function]
+   50 | static void MX_GPIO_Init(void);
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:51:13: warning: 'MX_USART2_UART_Init' declared 'static' but never defined [-Wunused-function]
+   51 | static void MX_USART2_UART_Init(void);
+      |             ^~~~~~~~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:31: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+15:37:02 **** Incremental Build of configuration Debug for project Prvni_projekt ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:70:9: error: expected ',' or ';' before 'while'
+   70 |         while (1) {
+      |         ^~~~~
+../Core/Src/main.c:274:1: error: expected declaration or statement at end of input
+  274 | }
+      | ^
+../Core/Src/main.c:69:18: warning: unused variable 'pole' [-Wunused-variable]
+   69 |         uint32_t pole[] = {1,0,0,0,0,1,1,1,0,1,1,0,0,0,0,1,1,1,0,1,1,0,0,0,0,1,1,1,0,1,1,0}
+      |                  ^~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:50:13: warning: 'MX_GPIO_Init' declared 'static' but never defined [-Wunused-function]
+   50 | static void MX_GPIO_Init(void);
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:51:13: warning: 'MX_USART2_UART_Init' declared 'static' but never defined [-Wunused-function]
+   51 | static void MX_USART2_UART_Init(void);
+      |             ^~~~~~~~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:31: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+15:42:35 **** Incremental Build of configuration Debug for project Prvni_projekt ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Prvni_projekt.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Temp\Controlers\Prvni_projekt\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Prvni_projekt.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Prvni_projekt.elf
+ 
+arm-none-eabi-size   Prvni_projekt.elf 
+arm-none-eabi-objdump -h -S  Prvni_projekt.elf  > "Prvni_projekt.list"
+   text	   data	    bss	    dec	    hex	filename
+    544	      8	   1568	   2120	    848	Prvni_projekt.elf
+Finished building: default.size.stdout
+ 
+Finished building: Prvni_projekt.list
+ 
+15:42:42 **** Incremental Build of configuration Debug for project Prvni_projekt ****
+make -j4 all 
+arm-none-eabi-size   Prvni_projekt.elf 
+   text	   data	    bss	    dec	    hex	filename
+    544	      8	   1568	   2120	    848	Prvni_projekt.elf
+Finished building: default.size.stdout
+ 
+15:44:15 **** Incremental Build of configuration Debug for project Prvni_projekt ****
+make -j4 all 
+arm-none-eabi-size   Prvni_projekt.elf 
+   text	   data	    bss	    dec	    hex	filename
+    544	      8	   1568	   2120	    848	Prvni_projekt.elf
+Finished building: default.size.stdout
+ 
+15:46:57 **** Incremental Build of configuration Debug for project Prvni_projekt ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Prvni_projekt.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Temp\Controlers\Prvni_projekt\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Prvni_projekt.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Prvni_projekt.elf
+ 
+arm-none-eabi-size   Prvni_projekt.elf 
+arm-none-eabi-objdump -h -S  Prvni_projekt.elf  > "Prvni_projekt.list"
+   text	   data	    bss	    dec	    hex	filename
+    524	      8	   1568	   2100	    834	Prvni_projekt.elf
+Finished building: default.size.stdout
+ 
+Finished building: Prvni_projekt.list
+ 
+15:47:51 **** Incremental Build of configuration Debug for project Prvni_projekt ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Prvni_projekt.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Temp\Controlers\Prvni_projekt\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Prvni_projekt.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Prvni_projekt.elf
+ 
+arm-none-eabi-size   Prvni_projekt.elf 
+arm-none-eabi-objdump -h -S  Prvni_projekt.elf  > "Prvni_projekt.list"
+   text	   data	    bss	    dec	    hex	filename
+    544	      8	   1568	   2120	    848	Prvni_projekt.elf
+Finished building: default.size.stdout
+ 
+Finished building: Prvni_projekt.list
+ 
+15:49:57 **** Incremental Build of configuration Debug for project Prvni_projekt ****
+make -j4 all 
+arm-none-eabi-size   Prvni_projekt.elf 
+   text	   data	    bss	    dec	    hex	filename
+    544	      8	   1568	   2120	    848	Prvni_projekt.elf
+Finished building: default.size.stdout
+ 
+15:50:50 **** Incremental Build of configuration Debug for project Prvni_projekt ****
+make -j4 all 
+arm-none-eabi-size   Prvni_projekt.elf 
+   text	   data	    bss	    dec	    hex	filename
+    544	      8	   1568	   2120	    848	Prvni_projekt.elf
+Finished building: default.size.stdout
+ 
+15:50:56 **** Incremental Build of configuration Debug for project Prvni_projekt ****
+make -j4 all 
+arm-none-eabi-size   Prvni_projekt.elf 
+   text	   data	    bss	    dec	    hex	filename
+    544	      8	   1568	   2120	    848	Prvni_projekt.elf
+Finished building: default.size.stdout
+ 
+15:51:54 **** Incremental Build of configuration Debug for project Prvni_projekt ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Prvni_projekt.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Temp\Controlers\Prvni_projekt\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Prvni_projekt.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Prvni_projekt.elf
+ 
+arm-none-eabi-size   Prvni_projekt.elf 
+arm-none-eabi-objdump -h -S  Prvni_projekt.elf  > "Prvni_projekt.list"
+   text	   data	    bss	    dec	    hex	filename
+    544	      8	   1568	   2120	    848	Prvni_projekt.elf
+Finished building: default.size.stdout
+ 
+Finished building: Prvni_projekt.list
+ 
+15:54:04 **** Incremental Build of configuration Debug for project Prvni_projekt ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Prvni_projekt.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Temp\Controlers\Prvni_projekt\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Prvni_projekt.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Prvni_projekt.elf
+ 
+arm-none-eabi-size   Prvni_projekt.elf 
+arm-none-eabi-objdump -h -S  Prvni_projekt.elf  > "Prvni_projekt.list"
+   text	   data	    bss	    dec	    hex	filename
+   2384	     12	   1564	   3960	    f78	Prvni_projekt.elf
+Finished building: default.size.stdout
+ 
+Finished building: Prvni_projekt.list
+ 

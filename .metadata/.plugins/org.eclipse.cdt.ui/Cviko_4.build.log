@@ -1,0 +1,29 @@
+17:26:36 **** Incremental Build of configuration Debug for project Cviko_4 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_ADC_ConvCpltCallback':
+../Core/Src/main.c:71:25: warning: unused variable 'avg_pot' [-Wunused-variable]
+   71 |         static uint32_t avg_pot;
+      |                         ^~~~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:147:26: warning: unused variable 'voltage' [-Wunused-variable]
+  147 |                 uint32_t voltage = 330 * (*VREFINT_CAL_ADDR) / raw_volt;
+      |                          ^~~~~~~
+At top level:
+../Core/Src/main.c:71:25: warning: 'avg_pot' defined but not used [-Wunused-variable]
+   71 |         static uint32_t avg_pot;
+      |                         ^~~~~~~
+arm-none-eabi-gcc -o "Cviko_4.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Temp\Mara_MKS\Controlers\Cviko_4\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Cviko_4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Cviko_4.elf
+ 
+arm-none-eabi-size   Cviko_4.elf 
+arm-none-eabi-objdump -h -S  Cviko_4.elf  > "Cviko_4.list"
+   text	   data	    bss	    dec	    hex	filename
+  11736	     20	   1796	  13552	   34f0	Cviko_4.elf
+Finished building: default.size.stdout
+ 
+Finished building: Cviko_4.list
+ 
+
+17:26:37 Build Finished. 0 errors, 3 warnings. (took 876ms)
+

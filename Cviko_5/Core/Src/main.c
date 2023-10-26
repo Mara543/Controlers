@@ -115,7 +115,7 @@ static void uart_process_command(char* cmd) {
 	//vypíše mi status obou led diod
 	else if (strcasecmp(token, "STATUS") == 0) {
 
-		uint8_t status[2] = {0, 0};
+		uint8_t status[2];
 
 		status[0] = HAL_GPIO_ReadPin(LED1_GPIO_Port, LED1_Pin);
 

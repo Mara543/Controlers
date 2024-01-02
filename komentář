@@ -1,0 +1,71 @@
+/*
+ * sct.c
+ *
+ *  Created on: Oct 12, 2023
+ *      Author: xvever12
+ */
+
+#include "sct.h"
+#include <math.h>
+
+// Inicializace SCT (Serial Communication Technology)
+void sct_init(void)
+{
+    sct_led(0);  // Vypnutí všech LED na začátku
+}
+
+// Funkce pro ovládání LED pomocí SCT
+void sct_led(uint32_t value)
+{
+    for (int i = 0; i < 32; i++){
+        // Nastavení hodnoty SDI (Serial Data Input) pinu podle aktuálního bitu hodnoty
+        HAL_GPIO_WritePin(SCT_SDI_GPIO_Port, SCT_SDI_Pin, (value>>i)%2);
+
+        // Generování CLK (Clock) pulsu
+        HAL_GPIO_WritePin(SCT_CLK_GPIO_Port, SCT_CLK_Pin, 1);
+        HAL_GPIO_WritePin(SCT_CLK_GPIO_Port, SCT_CLK_Pin, 0);
+    }
+
+    // Aktivace NLA (Latch) signálu pro aktualizaci výstupů
+    HAL_GPIO_WritePin(SCT_NLA_GPIO_Port, SCT_NLA_Pin, 1);
+    HAL_GPIO_WritePin(SCT_NLA_GPIO_Port, SCT_NLA_Pin, 0);
+
+    // Vypnutí NOE (Output Enable) signálu
+    HAL_GPIO_WritePin(SCT_NOE_GPIO_Port, SCT_NOE_Pin, 0);
+}
+
+// Pole pro mapování segmentů displeje na konkrétní čísla a LED
+static const uint32_t reg_values[4][10] = {
+    // Konfigurace pro každý segment displeje a LED
+};
+
+// Funkce pro nastavení hodnoty na displeji
+void sct_value(int16_t value, uint8_t led)
+{
+    uint32_t reg = 0;
+
+    // Nastavení hodnoty na jednotlivých číslicích displeje
+    reg |= reg_values[0][value / 100 % 10];
+    reg |= reg_values[1][value / 10 % 10];
+    reg |= reg_values[2][value / 1 % 10];
+
+    // Nastavení hodnoty LED
+    reg |= reg_values[3][led];
+
+    // Zobrazení hodnoty na displeji
+    sct_led(reg);
+}
+
+// Alternativní funkce pro zobrazení hodnoty s desetinnou tečkou
+/*
+void sct_value(float f_value, uint8_t led)
+{
+    // Kód pro zobrazení hodnoty s desetinnou tečkou
+}
+
+// Funkce pro zobrazení textu "HI" na displeji
+void say_hi()
+{
+    // Kód pro zobrazení textu "HI"
+}
+*/
